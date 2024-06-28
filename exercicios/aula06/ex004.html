@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome =prompt('qual e o seu nome')
+        document.write(`seu nome tem ${nome.length} letras <br/>`)//lenght=saber qnts letras tem 
+        document.write(`seu nome em maiusculas é<stong> ${nome.toUpperCase()}</stong> <br/>`)
+        document.write(`e seu nome em minusculas fica <strong>${nome.toLowerCase()}</strong> <br/>`)
+        var n1 =1545.5
+        document.write(n1.toFixed(2))
+        document.write(n1.toFixed(2).replace('.',','))
+        document.write(n1.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}))
+    </script>
+</body>
+</html>
