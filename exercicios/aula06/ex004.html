@@ -9,12 +9,38 @@
     <script>
         var nome =prompt('qual e o seu nome')
         document.write(`seu nome tem ${nome.length} letras <br/>`)//lenght=saber qnts letras tem 
-        document.write(`seu nome em maiusculas é<stong> ${nome.toUpperCase()}</stong> <br/>`)
-        document.write(`e seu nome em minusculas fica <strong>${nome.toLowerCase()}</strong> <br/>`)
+        document.write(`seu nome em maiusculas é<stong> ${nome.toUpperCase()}</stong> <br/>`)//toUpperCase() e para deixar a palavra em maiusculas
+        document.write(`e seu nome em minusculas fica <strong>${nome.toLowerCase()}</strong> <br/>`)//toLowerCase() e para deixar a palavra em minusculas
         var n1 =1545.5
-        document.write(n1.toFixed(2))
-        document.write(n1.toFixed(2).replace('.',','))
-        document.write(n1.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}))
+        document.write(n1.toFixed(2))//toFixed(2) e para parecer 2 numeros dps da virgula
+        document.write(n1.toFixed(2).replace('.',','))//aqui estamos colocando , no lugar de .
+        document.write(n1.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})) //aqui estamos colocando o numero em forma de salario e em real
+        document.write(n1.toLocaleString('USA',{style:'currency',currency:'USD'}))
+        // 5==5 -> perguntando se eles sao iguais.
+        //5=='5' -> mesmo sendo do tp diferente o computador entende q eles tem a mesma grandeza
+        //5===5 -> 3 =, significa se eles sao IDENTICOS
+        //5==='5' ->nesse caso o resultado é false
+        // ||-> isso aui é o 'ou'
+        //&&-> isso aqui é o 'e'
+        // !-isso aqui é o negação
+        //exemplo pretico:]
+        // ! me de uma caneta azul. ent qualquer caneta da nao cor azul é aceita
+        // me de uma caneta azul && vermelha.-> so vou ficar satisfeito com uma caneta azul e vermelha.
+        //me de uma caneta azul || vermelha. -> se for azul estou satisfeito ou se for vermelha tabmem vou estar satisfeito
+        /* 
+        > var n1=6
+        undefined
+        > var n2=9
+        undefined
+        > var n3=7
+        undefined
+        > var media=(n1+n2+n3)/3
+        undefined
+        > var boletim=media>=7 ?'APROVADO' :'REPROVADO'
+        undefined
+        > boletim
+        'APROVADO'
+        */
     </script>
 </body>
 </html>
