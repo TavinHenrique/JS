@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refazendo os exercicios</title>
+    <style>
+        div#area{
+            background-color: lightskyblue;
+            color: black;
+            border-radius:10px;
+            font: bold 20px arial;
+            text-align: center;
+            line-height: 200px;
+            height: 200px;
+            width: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        interaja
+    </div>
+    <h1>Somando os valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> <!--caixa de texto para pegar numero-->
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()" ><!--botao com nome de somar com a funcao de somar ao clicar no botao -->
+    <div id="res">resultado</div>
+    <script>
+        var area=document.querySelector('div#area')//variavel pegando a div com id area
+        function somar(){
+            var tx1= document.querySelector('input#txtn1')//selecionado as caixas com os numeros
+            var tx2=document.getElementById('txtn2')
+            var res= document.getElementById('res')// selecionado a div para mudar dps
+            var n1= Number(tx1.value)//pegando o texto nas caixas e transformando em numero
+            var n2= Number(tx2.value)
+            var s= n1+n2
+            res.innerHTML=(`A soma entre ${n1} e ${n2} é: ${s}`)//reescrevendo com resultado com a soma
+        }
+        area.addEventListener('click' , clicar)//serve para qunado aconter a acao, em peimeiro colocar a acao e dps a funcao
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout' , sair)
+        function clicar(){
+            area.innerHTML='clicou'
+            area.style.background='orange'
+        }// criando as funcao e o q sera feito
+        function sair(){
+            area.innerHTML='saiu'
+            area.style.background='green'
+            area.style.color='white'
+        }
+        function entrar(){
+            area.innerHTML='entrou'
+            area.style.background='pink'
+        }
+    </script>
+</body>
+</html>
