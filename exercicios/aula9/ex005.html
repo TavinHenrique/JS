@@ -15,14 +15,26 @@
 <body>
     <h1>Iniciando estudos com o DOM</h1>
     <p>aqui vai o resultado</p>
-    <p>predendo a usar <strong>DOM</strong> em java script</p>
-    <div id="#">
+    <p class="treino">predendo a usar <strong>DOM</strong> em java script</p>
+    <div id="msg">
         clique em mim
     </div>
     <script>
-        var corpo =document.body
-        var p1=document.getElementsByClassName('p')[0]
+        var corpo= document.body
+        var p1=document.getElementsByTagName('p')[0]
+        var p2=document.querySelector('p.treino')
+        p1.style.backgroundColor='blue'
+        p1.style.color='orange'
+        document.write(p1.innerText)
+        corpo.style.background='white'
+        document.write(p2.innerHTML)
+        var d=document.querySelector('div#msg')
+        d.style.background='black'
+        d.style.color='white'
+        document.write(d.innerText='estou apredendo')
+        d.style.color='blue'
         
+
     </script>
 </body>
 </html>
