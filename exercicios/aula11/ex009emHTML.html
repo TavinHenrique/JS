@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando a Nacionalidade</title>
+</head>
+<body>
+    <h1>Testando a nacionalidade</h1>
+    <p>Digite onde você nasceu abaixo:</p>
+    <input type="text" name="Pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var txt = document.querySelector('input#pais').value.toLowerCase(); // Captura o valor do input em minúsculas
+
+            var res = document.querySelector('div#res');
+            
+            if (txt == 'brasil') {
+                res.innerHTML = "Você é Brasileiro";
+            } else {
+                res.innerHTML = "Você é estrangeiro";
+            }
+        }
+    </script>
+</body>
+</html>

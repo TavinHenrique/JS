@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculando o IMC</title>
+</head>
+<body>
+    <h1>Calculando o seu IMC(Índice de Massa Corporal)</h1>
+    <p>digite seu peso</p>
+    <input type="number" name="peso" id="peso"> KG
+    <p>digite sua altura</p>
+    <input type="number" name="altura" id="altura"> CM
+    <input type="button" value="calcular" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular(){
+        var res =document.querySelector('div#res')
+        var peso=document.querySelector('input#peso')
+        var peso2=Number(peso.value)
+        var alt=document.querySelector('input#altura')
+        var alt2=Number(alt.value/100)
+        var calc= peso2/(alt2**2)
+        res.innerHTML=`<p>O seu IMC é ${calc.toFixed(2)}</p>`
+        }
+        if(calc<18.5){
+            res.innerHTML+="<p>Você esta abaxo do peso</p>";
+        }
+        else if(calc>=18.5 || calc<=24.9){
+            res.innerHTML+="<p>Você esta no peso normal</p>";
+        }
+        else if(calc>=25 || calc<=29.9){
+            res.innerHTML+="<p>Você esta no peso normal</p>";
+        }
+        else{
+            res.innerHTML+="<p>Você esta obeso</p>";
+        }
+    
+        
+
+    </script>
+</body>
+</html>
