@@ -1,34 +1,47 @@
 @charset "UTF-8";
 
 body{
-    background-color:rgb(75, 116, 250);
+    background-color: aqua;
     font: normal 18px arial;
 }
-header{
-    color:white;
+h1{
     text-align: center;
+    font: bold 2em arial;
+    color: white;
+    padding:20px;
 }
 section{
-    background-color:white;
+    background-color: white;
     border-radius:10px;
-    padding:15px;
-    width:500px;
     margin: auto;
+    width:500px;
+    padding:15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
-
 }
 div>img#imagem{
+    border-radius:50%;
     width:200px;
     height:200px;
-    border-radius:50%;
     margin: auto;
+    padding:15px;
+
+    
 }
 div{
     text-align: center;
-    padding: 10px;
+    font: normal 20px arial;
 }
 footer{
-    color: white;
     text-align: center;
+    padding:20px;
     font-style: italic;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+a:hover{
+    background-color: rgba(158, 155, 155, 0.308);
+    text-decoration: underline;
 }
